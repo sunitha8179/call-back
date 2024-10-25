@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=document.createElement("input")
+        a.placeholder="enter your dob year"
+        document.body.appendChild(a)
+        var btn=document.createElement("button")
+        btn.innerText="submit"
+        document.body.appendChild(btn)
+        var data=new Date()
+        var year=data.getFullYear()
+        btn.addEventListener("click",function(){
+            var para=document.createElement("p")
+            para.style.color="green"
+            document.body.appendChild(para)
+            var c=a.value
+            para.innerText=`your age is ${year-c}`
+
+                })
+    </script>
+</body>
+</html>
